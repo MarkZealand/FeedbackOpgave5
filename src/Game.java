@@ -4,14 +4,11 @@ public class Game {
     private String genre;
     private double price;
 
-    public static int gameCount = 0;
-
     public Game(int gameId, String title, String genre, double price) {
         this.gameId = gameId;
         this.title = title;
         this.genre = genre;
         this.price = price;
-        gameCount++;
     }
     public int getGameId() {
         return gameId;

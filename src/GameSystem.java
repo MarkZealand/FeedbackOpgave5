@@ -19,6 +19,7 @@ public class GameSystem{
         if(gameCount == games.length){
             System.out.println("No more room for games");
         }
+        //Vel sådan set ikke nødvendig at have med, da det jo ikke burde kunne ske? Hvad er best practice i dette tilfælde?
         else if(gameCount > games.length){
             System.out.println("Something went very wrong... More games than possible");
         }
@@ -33,6 +34,7 @@ public class GameSystem{
         if(playerCount == players.length){
             System.out.println("No more room for players");
         }
+        //Vel sådan set ikke nødvendig at have med, da det jo ikke burde kunne ske? Hvad er best practice i dette tilfælde?
         else if(playerCount > players.length){
             System.out.println("Something went very wrong... More players than possible");
         }
@@ -54,7 +56,7 @@ public class GameSystem{
 
     void updatePlayerScore(int playerId, double newScore){
         Player player = findPlayerById(playerId);
-        player.setScore(newScore);
+        player.updateScore(newScore);
     }
     Game findGameById(int gameId){
         for (int i = 0; i < gameCount; i++) {   // ikke games[gameId]
